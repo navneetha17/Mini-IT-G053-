@@ -21,7 +21,7 @@ body::before{
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("Campus.png");
+  background-image: url("Images/Campus.png");
   background-size: cover;
   background-position: center;
   opacity: 0.5;
