@@ -63,6 +63,7 @@ body::before{
    display: block;
    margin-bottom: 5px;
    font-size: 14px;
+   font-weight: bold;
 }
 
 .input-group input{
@@ -102,4 +103,15 @@ button:hover{
 
 .register-link a:hover{
    text-decoration: underline;
+}
+
+input{
+  display:block;
+  margin-bottom: 20px;
+}
+
+.toggle-text{
+   font-size: 15px;
+   cursor: pointer;
+   padding-left: 220px;
 }

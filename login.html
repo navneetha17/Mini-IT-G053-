@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>CraveSmart - Login</title>
   <link rel="stylesheet" href="style.css">
-</head>
+  <script defer src="project.js"></script> 
 
+</head>
 <body>
  <div class="container">
   <div class="login-box">
@@ -16,12 +17,13 @@
 
       <div class="input-group">
         <label>Username</label>
-        <input type="text" name="username" placeholder="Enter username" maxlength="10" required>
+        <input type="username" id="username">
       </div>
 
       <div class="input-group">
         <label>Password</label>
-        <input type="password" name="password" placeholder="Enter password" maxlength="8" required>
+        <span id="toggleLoginPassword" class="toggle-text">👁️</span>
+        <input type="password" id="loginPassword" placeholder="Enter Password">
       </div>
 
       <button type="submit">Login</button>
