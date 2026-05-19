@@ -1,0 +1,18 @@
+START
+
+FUNCTION get_user_input():
+    ASK user for cravings (e.g., "pizza", "burger", "dessert")
+    ASK user for budget (e.g., RM20)
+    RETURN cravings, budget
+
+FUNCTION filter_by_cravings(dataset, cravings):
+    SELECT items from dataset WHERE food_type matches cravings
+    RETURN craving_filtered_list
+
+FUNCTION filter_by_budget(craving_filtered_list, budget):
+    SELECT items WHERE price <= budget
+    RETURN budget_filtered_list
+
+FUNCTION rank_results(budget_filtered_list):
+    SORT items by rating (highest first)
+    RETURN ranked_list
