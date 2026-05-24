@@ -17,14 +17,17 @@
 
       <div class="input-group">
         <label>Username</label>
-        <input type="text" name="username" id="username">
+        <input type="text" name="username" id="username" placeholder="Enter username">
       </div>
 
       <div class="input-group">
         <label>Password</label>
-        <span id="toggleLoginPassword" class="toggle-text">👁️</span>
-        <input type="password" name="password" id="loginPassword" placeholder="Enter Password">
-      </div>
+
+        <div class="password-wrapper">
+          <input type="password" name="enter_password" id="registerPassword" placeholder="Enter password" maxlength="8" required>
+                
+          <span id="toggleRegisterPassword" class="toggle-text">👁️</span>
+        </div>
 
       <button type="submit">Login</button>
 

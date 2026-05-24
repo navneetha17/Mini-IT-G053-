@@ -7,7 +7,7 @@
 body {
   background: linear-gradient(to right, #0f525A, #A52A2A);
   background-repeat: no-repeat;
-  font-family: Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@ body::before {
   border-radius: 10px;
   width: 300px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .login-box h1 {
@@ -63,7 +63,8 @@ body::before {
 .input-group label {
   display: block;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -105,10 +106,20 @@ button:hover {
   text-decoration: underline;
 }
 
+.password-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 35px;
+}
+
 .toggle-text {
-  font-size: 15px;
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 30px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
