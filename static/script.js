@@ -11,6 +11,5 @@ function setupToggle(inputId, toggleId) {
 }
 
 setupToggle("loginPassword", "toggleLoginPassword");
-
 setupToggle("registerPassword", "toggleRegisterPassword");
 setupToggle("confirmPassword", "toggleConfirmPassword");
