@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>CraveSmart - Login</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script> 
-
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script> 
 </head>
+
 <body>
  <div class="container">
   <div class="login-box">
@@ -17,25 +17,23 @@
 
       <div class="input-group">
         <label>Username</label>
-        <input type="username" id="username">
+        <input type="text" name="username" id="username">
       </div>
 
       <div class="input-group">
         <label>Password</label>
         <span id="toggleLoginPassword" class="toggle-text">👁️</span>
-        <input type="password" id="loginPassword" placeholder="Enter Password">
+        <input type="password" name="password" id="loginPassword" placeholder="Enter Password">
       </div>
 
       <button type="submit">Login</button>
 
       <p class="register-link">
-        Don't have an account?<a href="register.html">Sign up</a>
+        Don't have an account? <a href="/register">Sign up</a>
       </p>
 
     </form>
   </div>
  </div>
 </body>
-
 </html>
-

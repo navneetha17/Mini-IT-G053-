@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CraveSmart - Register</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+ <div class="container">
+  <div class="login-box">
+    <h1>CraveSmart</h1>
+    <h2>Register</h2>
+
+    <form action="/register" method="POST">   
+
+      <div class="input-group">
+        <label>Username</label>
+        <input type="text" name="username" id="username" placeholder="Enter username" maxlength="10" required>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <span id="toggleRegisterPassword" class="toggle-text">👁️</span>
+        <input type="password" name="password" id="registerPassword" placeholder="Enter password" maxlength="8" required>
+
+        <span id="toggleConfirmPassword" class="toggle-text">👁️</span>
+        <input type="password" name="confirm_password" id="confirmPassword" placeholder="Confirm password" maxlength="8" required>
+      </div>
+
+      <button type="submit">Register</button>
+
+      <p class="register-link">
+        Already have an account? <a href="/login">Login</a>
+      </p>
+
+    </form>
+  </div>
+ </div>
+</body>
+</html>
