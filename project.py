@@ -43,7 +43,7 @@ def index():
     
     return render_template(
          "index.html",
-         recommendation=recommendation,
+         recommendation="recommendation",
          message=message
     )
 

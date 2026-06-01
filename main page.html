@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Crave Smart</title>
 
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f6f8fb;
+            background: #6f0420;
             margin: 0;
         }
 
@@ -27,8 +26,100 @@
 
         .subtitle {
             text-align: center;
-            color: #777;
+            color: #010000;
             font-size: 14px;
             margin-bottom: 25px;
         }
+        select, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+        select:focus {
+            outline: none;
+            border-color: #200101;
+        }
+
+        button {
+            background: #ecbcec;
+            color: white;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #ecbcec;
+        }
+
+        .results {
+            margin-top: 25px;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            border-radius: 12px;
+            background: #fff7f0;
+            margin-top: 10px;
+        }
+
+        .card small {
+            color: #888;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #5c021a;
+        }
+
+        .empty {
+            text-align: center;
+            color: #999;
+            margin-top: 20px;
+        }
+
     </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Crave Smart</h1>
+    <p class="subtitle">Find something nice within my budget </p>
+
+    <form method="POST">
+
+        <!-- Category -->
+        <select name="category" required>
+            <option value="">Choose category</option>
+            <option value="western">Western</option>
+            <option value="mamak">Mamak</option>
+            <option value="indian">Indian Cuisine</option>
+            <option value="beverages">Beverages</option>
+            <option value="malay food">MalayFood</option>
+            <option value="indonesia food">Indonesia Food</option>
+        </select>
+
+        <!-- Budget -->
+        <select name="budget" required>
+            <option value="">Choose budget</option>
+            <option value="5-9">RM5 - RM9 (Student Prices)</option>
+            <option value="10-15">RM10 - RM15 (Normal)</option>
+            <option value="16-20">RM16 - RM20 (Treat)</option>
+            <option value="21-31">RM21 - RM31 (Rich Day)</option>
+        </select>
+
+        <button type="submit">Find Food</button>
+    </form>
+
+    <div class="results">
+    
+    </div>
+    </body>
+    </html>
