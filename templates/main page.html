@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crave Smart</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main page.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🍔 Crave Smart</h1>
+        <p class="subtitle">Find something nice within your budget</p>
+
+        <form method="POST">
+
+            <select name="category" required>
+                <option value="">Choose Category</option>
+                <option value="western">Western</option>
+                <option value="mamak">Mamak</option>
+                <option value="indian">Indian Cuisine</option>
+                <option value="beverages">Beverages</option>
+                <option value="malay food">Malay Food</option>
+                <option value="indonesia food">Indonesia Food</option>
+            </select>
+
+            <select name="budget" required>
+                <option value="">Choose Budget</option>
+                <option value="5-9">RM5 - RM9 (Student Prices)</option>
+                <option value="10-15">RM10 - RM15 (Normal)</option>
+                <option value="16-20">RM16 - RM20 (Treat)</option>
+                <option value="21-31">RM21 - RM31 (Rich Day)</option>
+            </select>
+
+            <button type="submit">Find Food</button>
+
+        </form>
+
+        <div class="results">
+
+            {% if message %}
+                <p class="subtitle">{{ message }}</p>
+            {% endif %}
+
+            {% if recommendations %}
+
+                {% for food in recommendations %}
+
+                    <div class="card">
+
+                        <div>
+                            <strong>{{ food['name'] }}</strong><br>
+                            <small>{{ food['category'] }}</small>
+                        </div>
+
+                        <span class="price">
+                            RM{{ food['price'] }}
+                        </span>
+
+                    </div>
+
+                {% endfor %}
+
+            {% elif request.method == "POST" %}
+
+                <p class="empty">
+                    No food found 😢 Try another choice!
+                </p>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</body>
+</html>
