@@ -9,23 +9,43 @@
 
 {% if results %}
     {% for restaurant in results %}
-        <div>
-            <h2>{{ restaurant.name }}</h2>
 
-            <p>Food Type: {{ restaurant.category }}</p>
+    <div>
 
-            <p>Price: RM{{ restaurant.price }}</p>
+        <h2>{{ restaurant.name }}</h2>
+    
+        {% if restaurant.name in fav_names %}
 
-            <p>Location: {{ restaurant.location }}</p>
+            <p>❤️</p>
 
-            <p>
-                Ordering link:
-                <a href="{{ restaurant.link }}" target="_blank">
-                    Click here
-                </a>
-            </p>
-        </div>
-        <hr>
+            <a href="{{ url_for('delete_favourite', restaurant_name=restaurant.name) }}">
+                🗑️ Remove from Favourites
+            </a>
+
+        {% else %}
+
+            <form action="/favourite" method="POST">
+                <input type="hidden" name="restaurant_name" value="{{ restaurant.name }}">
+
+                <button type="submit">
+                    ❤️ Add to Favourites
+                </button>
+            </form>
+
+        {% endif %}
+
+        <p>Food Type: {{ restaurant.category }}</p>
+        <p>Price: RM{{ restaurant.price }}</p>
+        <p>Location: {{ restaurant.location }}</p>
+
+        <p>
+            <a href="{{ restaurant.link }}" target="_blank">Click here</a>
+        </p>
+
+    </div>
+
+    <hr>
+
     {% endfor %}
 {% else %}
     <h2>No restaurants found.</h2>
