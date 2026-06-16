@@ -18,13 +18,11 @@ class User(db.Model):
     password = db.Column(db.String(200), nullable=False)
 
 
-# Home route
 @app.route('/')
 def home():
     return redirect(url_for('login'))
 
 
-# LOGIN ROUTE
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -34,14 +32,13 @@ def login():
         user = User.query.filter_by(username=username).first()
 
         if user and bcrypt.check_password_hash(user.password, password):
-            return "Login Successful"
+            return redirect(url_for('home_page'))  
         else:
             return "Wrong Username or Password"
 
     return render_template('login.html')
 
 
-# REGISTER ROUTE
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -63,7 +60,11 @@ def register():
     return render_template('register.html')
 
 
-# Create database
+@app.route('/home', methods=['GET', 'POST'])
+def home_page():
+    return render_template('main page.html')
+
+
 with app.app_context():
     db.create_all()
 
