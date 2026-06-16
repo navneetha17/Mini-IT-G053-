@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
     <title>Crave Smart</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='main page.css') }}">
+    <button id="theme-toggle" onclick="toggleTheme()">🌜 Dark Mode</button>
+    <button id="favourites-btn" onclick="window.location.href='/favourites'"><b>❤️ Favourites</b></button>
 </head>
 <body>
 
     <div class="container">
 
         <h1>🍔 CraveSmart</h1>
-        <p class="subtitle">Find something nice within your budget</p>
-
-        <a href="/favourites">My Favourites</a>
+        <p class="subtitle">Find something nice within your budget!</p>
 
         <form action="/recommend" method="POST">
 
