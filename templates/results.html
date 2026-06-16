@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Recommendations</title>
+</head>
+<body>
+
+<h1>Recommended Restaurants</h1>
+
+{% if results %}
+    {% for restaurant in results %}
+        <div>
+            <h2>{{ restaurant.name }}</h2>
+
+            <p>Food Type: {{ restaurant.category }}</p>
+
+            <p>Price: RM{{ restaurant.price }}</p>
+
+            <p>Location: {{ restaurant.location }}</p>
+
+            <p>
+                Ordering link:
+                <a href="{{ restaurant.link }}" target="_blank">
+                    Click here
+                </a>
+            </p>
+        </div>
+        <hr>
+    {% endfor %}
+{% else %}
+    <h2>No restaurants found.</h2>
+{% endif %}
+
+</body>
+</html>

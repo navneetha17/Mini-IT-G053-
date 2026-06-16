@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Banana Leaf",
+    "category": "indian",
+    "price": 18,
+    "location": "Cyberjaya",
+    "link": "https://www.foodpanda.my/"
+  },
+  {
+    "name": "Coffee",
+    "category": "beverages",
+    "price": 20,
+    "location": "MMU Cafeteria",
+    "link": "https://www.foodpanda.my/"
+  },
+  {
+    "name": "Mee Goreng",
+    "category": "mamak",
+    "price": 8,
+    "location": "Mamak Bistro",
+    "link": "https://www.foodpanda.my/"
+  },
+  {
+    "name": "Chicken Chop",
+    "category": "western",
+    "price": 15,
+    "location": "DPulze",
+    "link": "https://www.foodpanda.my/"
+  },
+  {
+    "name": "Mac and Cheese",
+    "category": "western",
+    "price": 12,
+    "location": "DPulze",
+    "link": "https://www.foodpanda.my/"
+  },
+  {
+    "name": "Lamb Chop",
+    "category": "western",
+    "price": 25,
+    "location": "Cyberjaya",
+    "link": "https://www.foodpanda.my/"
+  },
+  {
+    "name": "Laksa",
+    "category": "malay food",
+    "price": 8,
+    "location": "MMU Food Court",
+    "link": "https://www.foodpanda.my/"
+  },
+  {
+    "name": "Nasi Lemak",
+    "category": "malay food",
+    "price": 6,
+    "location": "MMU Food Court",
+    "link": "https://www.foodpanda.my/"
+  },
+  {
+    "name": "Ayam Gepuk",
+    "category": "indonesia food",
+    "price": 12,
+    "location": "Cyberjaya",
+    "link": "https://www.foodpanda.my/"
+  },
+  {
+    "name": "Tealive",
+    "category": "beverages",
+    "price": 9,
+    "location": "Near MMU",
+    "link": "https://www.foodpanda.my/"
+  }
+]
