@@ -6,16 +6,17 @@
     <script defer src="{{ url_for('static', filename='script.js') }}"></script>
     <title>Crave Smart</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='main page.css') }}">
-    <button id="theme-toggle" onclick="toggleTheme()">🌜 Dark Mode</button>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_page.css') }}">
+    <button id="theme-toggle" onclick="toggleTheme()"><b>🌜 Dark Mode</b></button>
     <button id="favourites-btn" onclick="window.location.href='/favourites'"><b>❤️ Favourites</b></button>
+    <button id="logout-btn" onclick="window.location.href='/login'"><b>Logout</b></button>
 </head>
 <body>
 
     <div class="container">
 
         <h1>🍔 CraveSmart</h1>
-        <p class="subtitle">Find something nice within your budget!</p>
+        <p class="subtitle"><i>Find something nice within your budget!</i></p>
 
         <form action="/recommend" method="POST">
 
