@@ -12,23 +12,17 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-# =========================
-# USER MODEL
-# =========================
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
 
-# =========================
-# ROUTES
-# =========================
 
 @app.route('/')
 def home():
     return redirect(url_for('login'))
 
-# ---------- LOGIN ----------
+# LOGIN
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -47,7 +41,7 @@ def login():
 
     return render_template('login.html')
 
-# ---------- REGISTER ----------
+# REGISTER 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -71,12 +65,11 @@ def register():
 
     return render_template('register.html')
 
-# ---------- HOME PAGE ----------
+# HOME PAGE 
 @app.route('/home')
 def home_page():
     return render_template('main_page.html')
 
-# ---------- RECOMMENDATION (FIXED 405 ERROR HERE) ----------
 @app.route('/recommend', methods=['GET', 'POST'])
 def recommend():
     # If someone opens URL manually → redirect safely
@@ -108,14 +101,8 @@ def recommend():
 
     return render_template('results.html', results=results)
 
-# =========================
-# INIT DB
-# =========================
 with app.app_context():
     db.create_all()
 
-# =========================
-# RUN APP
-# =========================
 if __name__ == '__main__':
     app.run(debug=True)
