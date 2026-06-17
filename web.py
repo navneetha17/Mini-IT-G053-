@@ -15,16 +15,12 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-
-# =========================
-# USER TABLE (UPDATED)
-# =========================
+# USER TABLE
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
 
-    # NEW COLUMN (IMPORTANT)
     last_login = db.Column(db.DateTime)
 
 
@@ -34,17 +30,12 @@ class Favourite(db.Model):
     restaurant_name = db.Column(db.String(200), nullable=False)
 
 
-# =========================
 # HOME ROUTE
-# =========================
 @app.route('/')
 def home():
     return redirect(url_for('login'))
 
-
-# =========================
-# LOGIN ROUTE (UPDATED)
-# =========================
+# LOGIN ROUTE 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 
@@ -57,20 +48,17 @@ def login():
 
         if user and bcrypt.check_password_hash(user.password, password):
 
-            # GET previous login BEFORE updating
             previous_login = user.last_login
 
             session.permanent = True
             session['user_id'] = user.id
             session['username'] = user.username
 
-            # SHOW previous login
             if previous_login:
                session['last_login'] = previous_login.strftime('%d/%m/%Y %I:%M %p')
             else:
                session['last_login'] = "First login"
 
-            # UPDATE current login time
             user.last_login = datetime.now()
             db.session.commit()
 
@@ -81,9 +69,7 @@ def login():
     return render_template('login.html')
 
 
-# =========================
 # REGISTER ROUTE
-# =========================
 @app.route('/register', methods=['GET', 'POST'])
 def register():
 
@@ -113,9 +99,7 @@ def register():
     return render_template('register.html')
 
 
-# =========================
-# HOME PAGE
-# =========================
+# HOME PAGE ROUTE
 @app.route('/home')
 def home_page():
 
@@ -128,10 +112,7 @@ def home_page():
         last_login=session.get('last_login')
     )
 
-
-# =========================
-# RESTAURANT PAGE
-# =========================
+# RESTAURANT PAGE ROUTE
 @app.route('/restaurant/<path:restaurant_name>')
 def restaurant(restaurant_name):
 
@@ -149,7 +130,7 @@ def restaurant(restaurant_name):
             break
 
     if not restaurant_data:
-        return "Restaurant not found"
+        return "No matching food. Try different options!"
 
     fav_list = Favourite.query.filter_by(user_id=session['user_id']).all()
     fav_names = [f.restaurant_name for f in fav_list]
@@ -161,9 +142,7 @@ def restaurant(restaurant_name):
     )
 
 
-# =========================
-# ADD FAVOURITE
-# =========================
+# ADD FAVOURITE ROUTE
 @app.route('/favourite', methods=['POST'])
 def favourite():
 
@@ -183,9 +162,7 @@ def favourite():
     return redirect(request.referrer or url_for('favourites'))
 
 
-# =========================
-# DELETE FAVOURITE
-# =========================
+# DELETE FAVOURITE ROUTE
 @app.route('/delete_favourite/<restaurant_name>')
 def delete_favourite(restaurant_name):
 
@@ -204,9 +181,7 @@ def delete_favourite(restaurant_name):
     return redirect(request.referrer or url_for('favourites'))
 
 
-# =========================
-# VIEW FAVOURITES
-# =========================
+# VIEW FAVOURITES ROUTE
 @app.route('/favourites')
 def favourites():
 
@@ -223,9 +198,7 @@ def favourites():
     )
 
 
-# =========================
 # RECOMMEND ROUTE
-# =========================
 @app.route('/recommend', methods=['GET', 'POST'])
 def recommend():
 
@@ -258,10 +231,6 @@ def recommend():
 
     return render_template('results.html', results=results)
 
-
-# =========================
-# INIT DB
-# =========================
 with app.app_context():
     db.create_all()
 

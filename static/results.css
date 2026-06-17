@@ -1,0 +1,17 @@
+#logout-btn {
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+#home-btn {
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  position: absolute;
+  right: 140px;
+  top: 20px;
+}

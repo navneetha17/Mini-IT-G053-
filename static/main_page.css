@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   color: white;
   margin: 0;
@@ -17,6 +17,7 @@ body.dark-mode{
 #last_login {
   width: 200px;
   height: 40px;
+  color: #121212;
   font-size: 12px;
   position: absolute;
   left: 20px;
@@ -28,7 +29,7 @@ body.dark-mode{
   width: 250px;
   font-size: 12px;
   margin-bottom: 20px;
-  color: rgb(103, 110, 105);
+  color: rgb(78, 82, 79);
   font-family:Georgia, 'Times New Roman', Times, serif;
   position: absolute;
   left: 20px;
