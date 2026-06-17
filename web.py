@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, redirect, session, url_for
 from flask_bcrypt import Bcrypt
 from flask_sqlalchemy import SQLAlchemy
+from datetime import timedelta
 import json
 
 app = Flask(__name__)
 
 app.secret_key = "your_secret_key"
+
+app.permanent_session_lifetime = timedelta(days=5)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -43,6 +46,7 @@ def login():
         user = User.query.filter_by(username=username).first()
 
         if user and bcrypt.check_password_hash(user.password, password):
+            session.permanent = True
             session['user_id'] = user.id
             session['username'] = user.username
             return redirect(url_for('home_page'))
