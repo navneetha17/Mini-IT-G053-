@@ -6,7 +6,7 @@
     <script defer src="{{ url_for('static', filename='script.js') }}"></script>
 
     <button id="welcome-btn"><b><h2>Hello, {{username}}👋</h2> </b></button>
-
+    <button id="last_login">Last login: {{last_login}}</button>
     <title>Crave Smart</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='main_page.css') }}">
@@ -18,7 +18,7 @@
 
     <div class="container">
 
-        <h1>🍔 CraveSmart</h1>
+        <h1>🍔 CraveSmart 🍕</h1>
         <p class="subtitle"><i>Find something nice within your budget!</i></p>
 
         <form action="/recommend" method="POST">

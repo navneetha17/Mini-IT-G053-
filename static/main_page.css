@@ -14,9 +14,18 @@ body.dark-mode{
  padding: 40px;
 }
 
+#last_login {
+  width: 200px;
+  height: 40px;
+  font-size: 12px;
+  position: absolute;
+  left: 20px;
+  top: 120px;
+}
+
 #welcome-btn {
   height: 80px;
-  width: 200px;
+  width: 250px;
   font-size: 12px;
   margin-bottom: 20px;
   color: rgb(103, 110, 105);
@@ -27,9 +36,11 @@ body.dark-mode{
 }
 
 .container {
+    background-image: url("/static/Images/bg.jpg");
+    background-size: 800px 400px;
+    background-repeat: no-repeat;
     max-width: 700px;
     margin: auto;
-    background: rgb(85, 83, 83);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
@@ -37,6 +48,10 @@ body.dark-mode{
 
 h1 {
     text-align: center;
+}
+
+p {
+    font-size: 20px;
 }
 
 .subtitle {
