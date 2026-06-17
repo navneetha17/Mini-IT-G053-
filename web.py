@@ -44,6 +44,7 @@ def login():
 
         if user and bcrypt.check_password_hash(user.password, password):
             session['user_id'] = user.id
+            session['username'] = user.username
             return redirect(url_for('home_page'))
 
         return "Wrong Username or Password"
@@ -164,7 +165,7 @@ def favourites():
 # HOME PAGE ROUTE
 @app.route('/home')
 def home_page():
-    return render_template('main_page.html')
+    return render_template('main_page.html',username=session.get('username'))
 
 
 # RECOMMEND ROUTE

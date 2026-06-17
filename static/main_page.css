@@ -14,6 +14,18 @@ body.dark-mode{
  padding: 40px;
 }
 
+#welcome-btn {
+  height: 80px;
+  width: 200px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: rgb(103, 110, 105);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
 .container {
     max-width: 700px;
     margin: auto;
@@ -50,7 +62,7 @@ button {
   height: 40px;
   font-size: 12px;
   position: absolute;
-  left: 20px;
+  right: 20px;
   top: 80px;
 }
 
@@ -59,7 +71,7 @@ button {
   height: 40px;
   font-size: 12px;
   position: absolute;
-  left: 20px;
+  right: 150px;
   top: 20px;
 }
 
