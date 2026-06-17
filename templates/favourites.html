@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>My Favourites</title>
+    <button id="logout-btn" onclick="window.location.href='/login'"><b>Logout</b></button>
 
     <style>
         body {
@@ -9,10 +10,8 @@
             background-color: rgba(58, 4, 25, 0.333);
             background-repeat: no-repeat;
             background-size: 1370px 1100px;
-
             margin: 0;
             font-family: Arial, sans-serif;
-
             text-align: center;
         }
 
@@ -49,7 +48,18 @@
             transform: scale(1.05);
             transition: 0.2s;
         }
+
+        #logout-btn {
+          width: 100px;
+          height: 30px;
+          font-size: 15px;
+          position: absolute;
+          right: 20px;
+          top: 20px;
+        }
     </style>
+    <button id="logout-btn" onclick="window.location.href='/login'"><b>Logout</b></button>
+</head>
 </head>
 
 <body>
