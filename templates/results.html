@@ -10,7 +10,7 @@
     <button id="logout-btn" onclick="window.location.href='/login'"><b>Logout</b></button>
     <button id="home-btn" onclick="window.location.href='/home'"><b>Home</b></button>
 
-    <h1>Recommended Restaurant</h1>
+    <h1><i>Recommended Restaurant</i></h1>
 
     {% if results %}
         {% for restaurant in results %}
@@ -37,12 +37,17 @@
                 </form>
             {% endif %}
 
-            <p>Food Type: {{ restaurant.category }}</p>
+            <p>Cuisine: {{ restaurant.category }}</p>
+            <p>Description: {{ restaurant.description }}</p>
             <p>Price: RM{{ restaurant.price }}</p>
-            <p>Location: {{ restaurant.location }}</p>
+            <p>Location 📍: {{ restaurant.location }}</p>
+            <p>Address: {{ restaurant.address }}</p>
+            <p>Open hours 🕧: {{ restaurant.time }}</p>
+            <p>Distance from MMU Cyberjaya: {{ restaurant.distance }}</p>
+            <p>Google Rating ⭐: {{ restaurant.rating }}</p>
 
             <p>
-                <a href="{{ restaurant.link }}" target="_blank">Click here</a>
+                Delivery order - FoodPanda🐼: <a href="{{ restaurant.link }}" target="_blank">Click here</a>
             </p>
         </div>
 

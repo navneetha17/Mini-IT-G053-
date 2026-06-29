@@ -1,3 +1,29 @@
+body {
+  font-size: 17px;
+  background-image: url("Images/wood.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+label {
+  font-size: 16px;
+}
+
+input {
+  font-size: 16px;
+}
+
 #logout-btn {
   width: 100px;
   height: 30px;
@@ -17,6 +43,7 @@
 }
 
 .food-image {
-  width: 250px;
+  height: 250px;
+  width: 400px;
   border-radius: 10px;
 }
