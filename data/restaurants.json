@@ -1,82 +1,130 @@
 [
   {
-    "id" : 1,
-    "name": "Banana Leaf",
-    "category": "indian",
-    "price": 18,
-    "location": "Cyberjaya",
-    "link": "https://www.foodpanda.my/"
+    "name": "Nasi Lemak Ayam",
+    "category": "malay food",
+    "price": 6,
+    "location": "MMU Cafeteria Block A",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/nasilemak.jpg"
   },
   {
-    "id" : 2,
-    "name": "Coffee",
-    "category": "beverages",
-    "price": 20,
-    "location": "MMU Cafeteria",
-    "link": "https://www.foodpanda.my/"
-  },
-  {
-    "id" : 3,
-    "name": "Mee Goreng",
+    "name": "Mee Goreng Mamak",
     "category": "mamak",
-    "price": 8,
-    "location": "Mamak Bistro",
-    "link": "https://www.foodpanda.my/"
+    "price": 7,
+    "location": "Ali Maju Cyberjaya",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/meegoreng.jpg"
   },
   {
-    "id" : 4,
+    "name": "Roti Canai Set",
+    "category": "mamak",
+    "price": 5,
+    "location": "Ali Maju Cyberjaya",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/roticanai.jpg"
+  },
+  {
+    "name": "Tealive Pearl Milk Tea",
+    "category": "beverages",
+    "price": 9,
+    "location": "Tamarind Square",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/tealive.jpg"
+  },
+  {
+    "name": "Ayam Gepuk Original",
+    "category": "indonesia food",
+    "price": 12,
+    "location": "Ayam Gepuk Pak Gembus Cyberjaya",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/ayamgepuk.jpg"
+  },
+  {
     "name": "Chicken Chop",
     "category": "western",
     "price": 15,
-    "location": "DPulze",
-    "link": "https://www.foodpanda.my/"
+    "location": "The Street Cafe MMU",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/chickenchop.jpg"
   },
   {
-    "id" : 5,
     "name": "Mac and Cheese",
     "category": "western",
-    "price": 12,
-    "location": "DPulze",
-    "link": "https://www.foodpanda.my/"
+    "price": 13,
+    "location": "DPulze Food Court",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/maccheese.jpg"
   },
   {
-    "id" : 6,
-    "name": "Lamb Chop",
+    "name": "Chicken Briyani",
+    "category": "indian",
+    "price": 14,
+    "location": "Anjappar Cyberjaya",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/briyani.jpg"
+  },
+  {
+    "name": "Banana Leaf Rice",
+    "category": "indian",
+    "price": 18,
+    "location": "Anjappar Cyberjaya",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/bananaleaf.jpg"
+  },
+  {
+    "name": "Nasi Arab Mandy",
+    "category": "malay food",
+    "price": 17,
+    "location": "Saba Restaurant Cyberjaya",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/nasiarab.jpg"
+  },
+  {
+    "name": "Subway Footlong Meal",
+    "category": "western",
+    "price": 19,
+    "location": "DPulze Mall",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/subway.jpg"
+  },
+  {
+    "name": "Starbucks Frappuccino",
+    "category": "beverages",
+    "price": 20,
+    "location": "Tamarind Square",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/starbucks.jpg"
+  },
+  {
+    "name": "Nando's Quarter Chicken Meal",
     "category": "western",
     "price": 25,
-    "location": "Cyberjaya",
-    "link": "https://www.foodpanda.my/"
+    "location": "DPulze Mall",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/nandos.jpg"
   },
   {
-    "id" : 7,
-    "name": "Laksa",
-    "category": "malay food",
-    "price": 8,
-    "location": "MMU Food Court",
-    "link": "https://www.foodpanda.my/"
+    "name": "Salmon Teriyaki Set",
+    "category": "western",
+    "price": 28,
+    "location": "Sushi King DPulze",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/salmon.jpg"
   },
   {
-    "id" : 8,
-    "name": "Nasi Lemak",
-    "category": "malay food",
-    "price": 6,
-    "location": "MMU Food Court",
-    "link": "https://www.foodpanda.my/"
+    "name": "Mixed Grill Platter",
+    "category": "western",
+    "price": 30,
+    "location": "The Chicken Rice Shop DPulze",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/mixedgrill.jpg"
   },
   {
-    "id" : 9,
-    "name": "Ayam Gepuk",
-    "category": "indonesia food",
-    "price": 12,
-    "location": "Cyberjaya",
-    "link": "https://www.foodpanda.my/"
-  },
-  {
-    "id" : 10,
-    "name": "Tealive",
-    "category": "beverages",
-    "price": 9,
-    "location": "Near MMU",
-    "link": "https://www.foodpanda.my/"
+    "name": "Butter Chicken Set",
+    "category": "indian",
+    "price": 22,
+    "location": "Anjappar Cyberjaya",
+    "link": "https://www.foodpanda.my/",
+    "image": "Images/butterchicken.jpg"
   }
 ]
